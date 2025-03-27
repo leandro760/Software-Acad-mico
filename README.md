@@ -1,6 +1,6 @@
   
 
- Ejercicio 1: Software Académico  
+ Software Académico  
 
 Contextualización del problema: Las instituciones educativas deben gestionar las notas de los estudiantes de diversos programas académicos. 
 Para ello, requieren un software que automatice el cálculo de notas y la determinación de aprobaciones de los estudiantes. Se requiere desarrollar

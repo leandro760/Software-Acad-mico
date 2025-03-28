@@ -1,31 +1,31 @@
-const usuarioCorrecto = "leo";
-const contraseñaCorrecta = "2468";
-let intentos = 0;
-let acceso = false;
+const usuario = "leo";
+const contraseña = "2468";
+let intentosDeInicioDeSesión = 0;
+let usuarioEncontrado = false;
 
-while (intentos < 3 && !acceso) {
-    let usuario = prompt("Por favor ingrese su usuario:");
-    let contraseña = prompt("Por favor ingrese su contraseña:");
+while ( intentosDeInicioDeSesión < 3 && !usuarioEncontrado) {
+    let usuarioIngresado = prompt("Por favor ingrese su usuario:");
+    let contraseñaIngresada = prompt("Por favor ingrese su contraseña:");
 
-    if (usuario === usuarioCorrecto && contraseña === contraseñaCorrecta) {
-        acceso = true;
+    if (usuarioIngresado === usuario && contraseñaIngresada === contraseña) {
+        usuarioEncontrado= true;
         console.log("Bienvenido.");
     } else {
-        intentos++;
-        console.log("Usuario u Contraseña incorrecta. Intento " + intentos + " de 3.");
+        intentosDeInicioDeSesión++;
+        console.log("Usuario u Contraseña incorrecta. Intento " +  intentosDeInicioDeSesión + " de 3.");
     }
 }
 
-if (!acceso) {
-    console.log("Acceso denegado. Se han agotado los intentos.");
+if (!usuarioEncontrado) {
+    console.log("Usuario no encontrado. Se han agotado los intentos de inicio de sesión.");
 } else {
     let estudiantesAprobados = 0;
     let totalEstudiantes = 0;
     let nombresAprobados = [];
 
     while (true) {
-        let nombreEstudiante = prompt("Ingrese el nombre del estudiante (o 'salir' para terminar):");
-        if (nombreEstudiante.toLowerCase() === 'salir') {
+        let nombreEstudiante = prompt("Ingrese el nombre del estudiante (o 'finalizar' para terminar):");
+        if (nombreEstudiante.toLowerCase() === 'finalizar') {
             break;
         }
 
